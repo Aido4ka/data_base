@@ -1,0 +1,63 @@
+-- 1.
+drop view if exists vCostumer;
+CREATE VIEW vCostumer AS
+SELECT costumer_id,
+       costumer_in,
+       costumer_out
+FROM public."Costumer";
+
+-- 2.
+drop view if exists vOrder;
+CREATE VIEW vOrder AS
+SELECT order_id,
+       office_id,
+       costumer_id,
+       employer_id,
+       order_date,
+       order_time
+FROM public."Order";
+
+-- 3.
+drop view if exists vPayment;
+CREATE VIEW vPayment AS
+SELECT order_id,
+       costumer_id,
+       payment_order_date,
+       payment_time,
+       payment_type
+FROM public."Payment";
+
+-- 4.
+drop view if exists vEmployer;
+CREATE VIEW vEmployer AS
+SELECT employer_id,
+       office_id,
+       employer_nm,
+       salary,
+       phone_nb,
+       experience
+FROM public."Employer";
+
+-- 5.
+drop view if exists vHOOKAH;
+CREATE VIEW vHOOKAH AS
+SELECT hookah_id,
+       hookah_nm,
+       hookah_price,
+       hookah_desc
+FROM public."HOOKAH";
+
+-- 6.
+drop view if exists vOffice;
+CREATE VIEW vOffice AS
+SELECT office_id,
+       location,
+       phone_nb
+FROM public."Office";
+
+-- 7.
+drop view if exists vHookah_in_order;
+CREATE VIEW vHookah_in_order AS
+SELECT hookah_id,
+       order_id
+FROM public."Hookah_in_order";

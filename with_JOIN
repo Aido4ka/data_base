@@ -1,0 +1,26 @@
+-- 1.
+drop view if exists vemployer_office;
+CREATE VIEW vhookah_order AS
+select a.employer_id,
+       a.office_id,
+       a.employer_nm,
+       a.salary,
+       a.phone_nb,
+       a.experience,
+       b.location
+from public."Employer" a
+         INNER JOIN public."Office" b ON (a.office_id = b.office_id);
+
+-- 2.
+drop view if exists vhookah_order;
+CREATE VIEW vhookah_order AS
+SELECT a.hookah_id,
+       a.hookah_nm,
+       a.hookah_price,
+       a.hookah_desc,
+       b.order_id
+FROM public."HOOKAH" a
+         INNER JOIN public."Hookah_in_order" b ON (a.hookah_id = b.hookah_id);
+
+
+
