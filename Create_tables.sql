@@ -2,7 +2,7 @@ CREATE TABLE if not exists "HOOKAH"
 (
     hookah_id int NOT NULL,
     hookah_nm varchar(20) NOT NULL,
-    hookah_price int NOT NULL,
+    hookah_price double NOT NULL,
     hookah_desc text NOT NULL,
     CONSTRAINT hookah_pk PRIMARY KEY (hookah_id),
     CONSTRAINT chk_hookah CHECK (hookah_id > 0 and hookah_price > 0)
