@@ -1,4 +1,4 @@
--- 1.
+-- 1. 
 drop view if exists vCostumer;
 CREATE VIEW vCostumer AS
 SELECT costumer_id,
