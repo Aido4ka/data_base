@@ -1,4 +1,3 @@
-
 select * FROM "HOOKAH";
 
 INSERT INTO "Office" (office_id, location, phone_nb) VALUES (11, 'Ivanovskaya', '9254567889');
